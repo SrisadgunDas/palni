@@ -1,0 +1,29 @@
+<template>
+    <div class="slds-align_absolute-center">
+        <lightning-card    title="Simple form" icon-name="standard:account">
+        <div class="slds-box slds-box_small">
+            <lightning-input style="background-color: aliceblue;" type="text" label="Enter Name"
+                onchange={handlechange}></lightning-input>
+        </div><br>
+
+        <div class="slds-box slds-box_small">
+            <lightning-input style="background-color: aliceblue;" type="phone" label="phone Number"
+                onchange={handlechange}></lightning-input>
+        </div>
+        <br>
+        <div class="slds-box slds-box_small">
+            <lightning-input style="background-color: aliceblue;" type="email" label="Email"
+                onchange={handlechange}></lightning-input>
+        </div>
+        <br>
+        <div class="slds-box slds-box_small">
+            <lightning-input style="background-color: aliceblue;" type="text" label="Enter  text"
+                onchange={handlechange}></lightning-input>
+        </div>
+        <br>
+        <lightning-button variant="success" label="Save" title="titleName" onclick={createnewCustomer}></lightning-button> <br>
+        <lightning-badge label= {thisrecord} class="slds-badge_inverse"></lightning-badge>
+  </lightning-card>
+</div>
+  
+</template>

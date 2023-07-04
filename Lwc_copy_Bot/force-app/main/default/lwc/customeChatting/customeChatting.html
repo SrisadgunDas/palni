@@ -1,0 +1,34 @@
+<template>
+    <template lwc:if={isdata_avaliable}>
+     <c-first-comonet></c-first-comonet>
+    </template>
+    <template lwc:if={isForm_avaliable}>
+       <c-form_details></c-form_details>
+       </template>
+       <template lwc:if={isImage_avaliable}>
+       <c-show_image></c-show_image>
+        </template>
+        <template lwc:if={isImage_carousel}>
+         <c-carosal_bot></c-carosal_bot>
+             </template>
+             <template lwc:if={isChart_avaliable}>
+             <c-libs-chartjs></c-libs-chartjs>
+                    </template>
+                    <template lwc:if={is_inviceavaliable}>
+                     <c-pdf_generation></c-pdf_generation>
+                               </template>
+                               <template lwc:if={is_upload}>
+                                <c-file-upload></c-file-upload>
+                                          </template>
+                                          <template lwc:if={is_download}>
+                                            <c-document_download></c-document_download>
+                                                      </template>
+    <template lwc:else>
+        <div class={messageStyle}>
+            <lightning-formatted-rich-text
+                value={messageContent.value}>
+            </lightning-formatted-rich-text>
+        </div>
+    </template>
+    
+</template>

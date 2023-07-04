@@ -1,0 +1,11 @@
+<template>
+    <div class={messageStyle}>
+        <lightning-formatted-rich-text
+            value={messageContent.value}>
+        </lightning-formatted-rich-text>
+    </div>
+    <template if:true={datepicker} >
+        <c-lwcchatpack_datapicker  onpostingdatechange={handlePostMessage}></c-lwcchatpack_datapicker>
+    </template>
+
+</template>

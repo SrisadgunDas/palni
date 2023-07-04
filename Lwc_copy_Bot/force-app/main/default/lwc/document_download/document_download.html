@@ -1,0 +1,18 @@
+<template>
+    <lightning-card variant="Narrow" title="Hello" icon-name="standard:account">
+        <div class="refresh-icon-container">
+            <lightning-button label="Refresh" alternative-text="Refresh" title="Refresh" onclick={handleRefresh}></lightning-button>
+        </div>
+        <template if:true={files}>
+            <template for:each={files} for:item="file">
+                <div key={file.Id}>
+                    <p>{file.Title}</p>
+                    <p>{file.FileExtension}</p>
+                    <!-- Add more file details as needed -->
+                    <lightning-button variant="success" label="Download" onclick={handleDownload} data-content-document-id={file.ContentDocumentId} data-content-version-id={file.Id}></lightning-button>
+                    <lightning-button-icon variant="container" alternative-text="Download" icon-name="utility:download" onclick={handleDownload} data-content-document-id={file.ContentDocumentId} data-content-version-id={file.Id}></lightning-button-icon>
+                </div>
+            </template>
+        </template>
+    </lightning-card>
+</template>
