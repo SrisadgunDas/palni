@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Getting Data from LWC to Flow" icon-name="standard:account">
+        <lightning-input variant="standard" label="First Name" placeholder="Type here..." data-name="firstName"></lightning-input>
+        <lightning-input variant="standard" label="Last Name" placeholder="Type here..." data-name="lastName"></lightning-input>
+        <lightning-button variant="base" label="Save" title="titleName" onclick={handleClick}></lightning-button>
+        <lightning-flow flow-api-name="lastName_flow" flow-input-variables={flowvariables} if:true={is_flowavaliale}></lightning-flow>
+
+    </lightning-card>
+</template>

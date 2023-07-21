@@ -1,0 +1,14 @@
+<template>
+    
+    <template lwc:if={gmap} >
+        <c-lwcchatpack_gmap  input-params={strMessage} onpostmessage={handlePostMessage}></c-lwcchatpack_gmap>
+    </template>
+
+    <template lwc:else>
+        <div class={messageStyle}>
+            <lightning-formatted-rich-text
+                value={text}>
+            </lightning-formatted-rich-text>
+        </div>
+    </template>
+</template>
