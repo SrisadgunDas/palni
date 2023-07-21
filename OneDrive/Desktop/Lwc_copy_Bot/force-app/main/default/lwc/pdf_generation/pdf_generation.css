@@ -1,0 +1,45 @@
+table,
+td,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td,
+caption {
+  padding: 16px;
+}
+
+th {
+  padding: 16px;
+  background-color: lightblue;
+  text-align: left;
+}
+
+.hover_container:hover {
+  background-color: rgb(138, 122, 122);
+  cursor: pointer;
+}
+.card-container {
+  width: 400px; /* Adjust the width as needed */
+}
+.hover_container {
+  position: relative;
+}
+
+.button-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.button_icon {
+  --sds-c-icon-size: 500px; /* Increase the icon size as per your preference */
+}
+

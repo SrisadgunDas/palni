@@ -1,0 +1,68 @@
+<template>
+  <lightning-card  variant="Narrow" >
+  
+     <div class="hover_container"  >
+        <div class="card-container">
+        <table>
+        <tr>
+          <th colspan="3">Invoice #12345ABC</th>
+          <th>09 March 2023</th>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <strong>Pay To:</strong> <br> The Tech Park <br>
+            123 Willow Street <br>
+            Boulevard, LA - 567892
+          </td>
+          <td colspan="2">
+            <strong>Customer:</strong> <br>
+            John Lark <br>
+            Dummy Apartments <br>
+            276 Main Street <br>
+            Boulevard, LA - 567892
+          </td>
+        </tr>
+        <tr>
+          <th>Name/Description</th>
+          <th>Qty.</th>
+          <th>MRP</th>
+          <th>Amount</th>
+        </tr>
+        <tr>
+          <td>Shirt xl</td>
+          <td>3</td>
+          <td>400</td>
+          <td>1200</td>
+        </tr>
+        <tr>
+          <td>pant pollar</td>
+          <td>3</td>
+          <td>200</td>
+          <td>600</td>
+        </tr>
+        <tr>
+          <th colspan="3">Subtotal:</th>
+          <td>1800</td>
+        </tr>
+        <tr>
+          <th colspan="2">Tax</th>
+          <td>10%</td>
+          <td>180</td>
+        </tr>
+        <tr>
+          <th colspan="3">Grand Total:</th>
+          <td>Rs 1620</td>
+        </tr>
+      </table>
+      <div class="button-container">
+        <lightning-button-icon
+          icon-name="utility:download"
+          class="button_icon"
+          alternative-text="download"
+          onclick={outter_html}
+        ></lightning-button-icon>
+      </div>
+      </div>
+     </div>
+    </lightning-card>
+</template>

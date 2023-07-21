@@ -1,0 +1,11 @@
+.cointainer {
+    border: 1px solid #ccc;   
+}
+.slds-box_small{
+ 
+    border-radius: 25px;
+}
+.lightning-input{
+    padding-left: 10px;
+    padding-right: 10px;
+}

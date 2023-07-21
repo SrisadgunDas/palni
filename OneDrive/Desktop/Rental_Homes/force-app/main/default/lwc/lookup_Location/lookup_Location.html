@@ -1,0 +1,34 @@
+<template>
+    <lightning-card
+        title="Available Locations"
+        icon-name="custom:custom106"
+    >
+        <div class="slds-var-m-around_medium">
+            <lightning-input
+                type="search"
+                onchange={handleKeyChange}
+                class="slds-var-m-bottom_small"
+                label="Search"
+                value={searchKey}
+            ></lightning-input>
+            <template if:true={location}>
+                <template for:each={location} for:item="loc">
+                    <p key={loc.Id}>
+                        {loc.Location__c}
+                        <lightning-button-icon-stateful
+                            key={loc.Id}
+                            icon-name="utility:success"
+                            selected={loc.likeState}
+                            onclick={handleLikeButtonClick}
+                            data-id={loc.Id}
+                            alternative-text="Like"
+                        ></lightning-button-icon-stateful>
+                    </p>
+                </template>
+            </template>
+        </div>
+       <p>{location_selected} </p> 
+      
+    </lightning-card>
+<lightning-flow flow-api-name='Rental_homes_With_flow' flow-input-variables={flowvariables} lwc:if={is_flowavaliale}></lightning-flow>
+</template>
